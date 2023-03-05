@@ -202,4 +202,15 @@ Configure the tomcat server following the instructions below:
 
 ![IDEA](../fig/IDEA-tomcat-setup.png "Title")
 
+```code
+# The version of tomcat might be different
+Tomcat Home: /path/to/sakai-workspace/apache-tomcat-9.0.69 
+
+Tomcat base directory: /path/to/sakai-workspace/tomcat-sakai-master
+```
+
+Now you can run the tomcat server using IDEA.
+
+
+
 
