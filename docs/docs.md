@@ -133,7 +133,7 @@ Add the following code to ```tomcat-sakai-master/conf/context.xml``` file.
 </JarScanner>
 ```
 
-Comment the codes in ```tomcat-sakai-master/bin/setenv.sh```. And Add the following code to the top of this file.
+Comment out the codes in ```tomcat-sakai-master/bin/setenv.sh```. And Add the following code to the top of this file.
 
 ```bash
 # Modify the path
