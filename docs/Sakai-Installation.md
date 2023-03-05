@@ -1,15 +1,13 @@
-# Docs about sakai
+# Sakai Installation
 
-## Sakai Installation
-
-### Pre-Requisites
+## Pre-Requisites
 
 - Java-11(JDK)
 - Maven-3.6.3
 - Tomcat-9
 - Mysql-8
 
-### Set Maven and Java Paths
+## Set Maven and Java Paths
 
 - Open ~/.zshrc file
 
@@ -43,13 +41,13 @@ java -version
 mvn -version
 ```
 
-### Install mariaDB
+## Install mariaDB
 
 ```code
 brew install mariadb
 ```
 
-### Set up the database for Sakai
+## Set up the database for Sakai
 
 ```code
 mysql -u root -p
@@ -68,7 +66,7 @@ grant all on *.* to 'sakaiuser'@'127.0.0.1';
 flush privileges;
 ```
 
-### Create Sakai Workspace
+## Create Sakai Workspace
 
 Create working directories:
 
@@ -152,7 +150,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Duser.timezone=US/Eastern"
 CATALINA_OPTS="$CATALINA_OPTS -Duser.language=en -Duser.region=ES"
 ```
 
-### Download the source code
+## Download the source code
 
 [Sakai Source Code](https://github.com/sakaiproject/sakai)
 
@@ -194,7 +192,7 @@ Stop the server.
 bin/shutdown.sh
 ```
 
-### Intellij IDEA Setup
+## Intellij IDEA Setup
 
 Install Intellij IDEA from [here](https://www.jetbrains.com/idea/download/)
 
