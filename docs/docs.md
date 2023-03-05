@@ -11,7 +11,6 @@
 
 ### Set Maven and Java Paths
 
-
 - Open ~/.zshrc file
 
 ```code
@@ -156,6 +155,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Duser.language=en -Duser.region=ES"
 ### Download the source code
 
 [Sakai Source Code](https://github.com/sakaiproject/sakai)
+
 ```code
 cd sakai-workspace
 
@@ -186,11 +186,20 @@ Open the browser and paste the link:
 [http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal)
 
 Stop the server.
+
 ```code
 # stop the server
 # First: cmd + c (macOS) OR ctrl + c (Windows) to kill the program
 # Second: 
 bin/shutdown.sh
 ```
+
+### Intellij IDEA Setup
+
+Install Intellij IDEA from [here](https://www.jetbrains.com/idea/download/)
+
+Configure the tomcat server following the instructions below:
+
+![IDEA](../fig/IDEA-tomcat-setup.png "Title")
 
 
