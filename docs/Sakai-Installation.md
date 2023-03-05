@@ -15,7 +15,7 @@
 vi ~/.zshrc
 ```
 
-- Add Java and Maven paths to the end of the file.
+- Add Java and Maven paths to the end of the file. Note: modify ```JAVA_HOME``` and ```MAVEN_HOME``` based on your computer setting.
 
 ```code
 # Set Java path
@@ -23,7 +23,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/H
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Set Maven path
-export MAVEN_HOME=/Users/zhuoyang/dev/library/apache-maven-3.6.3
+export MAVEN_HOME=path/to/your/apache-maven-3.6.3
 PATH=$PATH:$MAVEN_HOME/bin
 export MAVEN_OPTS='-Xms1024m -Xmx2048m'
 ```
@@ -162,12 +162,12 @@ git clone https://github.com/sakaiproject/sakai
 cd sakai
 ```
 
-Build the source code.
+Build the source code. Note: modify ```-Dmaven.tomcat.home``` based on your computer setting.
 
 ```code
 # -Dmaven.test.skip=true : skip test
 # -T 4C : accelerate the building process.
-mvn clean install -Dmaven.test.skip=true -T 4C -Dmaven.tomcat.home=/Users/zhuoyang/dev/sakai-workspace/tomcat-sakai-master sakai:deploy-exploded -Dsakai.cleanup=true
+mvn clean install -Dmaven.test.skip=true -T 4C -Dmaven.tomcat.home=path/to/sakai-workspace/tomcat-sakai-master sakai:deploy-exploded -Dsakai.cleanup=true
 ```
 
 Test Sakai app.
