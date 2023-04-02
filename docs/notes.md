@@ -11,7 +11,7 @@ Note: ```cmd + shift + f``` is more powerful than ```double shift```
 
 **Search for HTML files:**
 
-- Use developer tools in Browsers to find the source code of the target.
+- Use developer tools in browsers to find the source code of the target.
 - Copy some unique string/pattern/id in the source code.
 - Do global search within the project directory.
 
