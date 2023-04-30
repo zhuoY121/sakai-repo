@@ -210,5 +210,30 @@ Tomcat base directory: /path/to/sakai-workspace/tomcat-sakai-master
 Now you can run the tomcat server using IDEA.
 
 
+## Errors and Solutions
 
+### An error when compiling sakai 22.x
 
+```code
+[ERROR] Failed to execute goal com.gitlab.haynes:libsass-maven-plugin:0.2.26:compile (default) on project library: Execution default of goal com.gitlab.haynes:libsass-maven-plugin:0.2.26:compile failed: An API incompatibility was encountered while executing com.gitlab.haynes:libsass-maven-plugin:0.2.26:compile: java.lang.UnsatisfiedLinkError: Can't load library: /var/folders/77/qstzpyd15h782vcmx3zzhy7c0000gn/T/libjsass-11124651531030339020/libjsass.dylib
+[ERROR] -----------------------------------------------------
+[ERROR] realm =    plugin>com.gitlab.haynes:libsass-maven-plugin:0.2.26
+[ERROR] strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+[ERROR] urls[0] = file:/Users/cs/.m2/repository/com/gitlab/haynes/libsass-maven-plugin/0.2.26/libsass-maven-plugin-0.2.26.jar
+...
+```
+
+Solution: Using x64 JDK to compile.
+
+- Install [sdkman](https://sdkman.io/) (JDK manager)
+- For mac M1 chip, you need to enable rosetta.
+  - Right Click "iterm2" => Click on "Get info" => Check "Open using Resetta"
+  - In terminal, run
+    - ```$ sdk config```
+  - Set ```sdkman_rosetta2_compatible=true```
+- In teriminal, run ```$ sdk list java``` to find a JDK version.
+- Install a JDK e.g.
+  - ```$ sdk install java 11.0.17-zulu```
+- Check JDK version:
+  - ```$ cat `which java` | file -```
+  - Should display: ```architecture x86_64```
