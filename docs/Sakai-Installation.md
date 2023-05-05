@@ -237,3 +237,4 @@ Solution: Using x64 JDK to compile.
 - Check JDK version:
   - ```$ cat `which java` | file -```
   - Should display: ```architecture x86_64```
+- Note: Sdkman will add settings to the ```.zshrc``` file, which will modify the ```JAVA_HOME``` variable accordingly.
