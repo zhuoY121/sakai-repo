@@ -15,4 +15,14 @@ Note: ```cmd + shift + f``` is more powerful than ```double shift```
 - Copy some unique string/pattern/id in the source code.
 - Do global search within the project directory.
 
+**Servlet**
 
+velocity/tool/src/java/org/sakaiproject/cheftool/ToolServlet.java
+
+- doGet()
+
+Get Action (the name of method for the action)
+
+velocity/tool/src/java/org/sakaiproject/cheftool/VelocityPortletPaneledAction.java
+
+- processAction()
