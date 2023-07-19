@@ -101,7 +101,7 @@ validationQuery@javax.sql.BaseDataSource=select 1 from DUAL
 defaultTransactionIsolationString@javax.sql.BaseDataSource=TRAN
 ```
 
-Download the latest tomcat-9 from [here](https://tomcat.apache.org/download-90.cgi).
+Download the latest tomcat-9 from [Official Website](https://tomcat.apache.org/download-90.cgi).
 
 Extract the tomcat in the ```sakai-workspace``` folder.
 
@@ -120,6 +120,15 @@ tar -czf tomcat-sakai-template.tgz
 
 # remove the .tgz file
 rm tomcat-sakai-template.tgz
+```
+
+Copy ```conf``` folder from tomcat to ```tomcat-sakai-master``` folder.
+
+```code
+cd sakai-workspace
+
+# copy "conf" folder from tomcat to "tomcat-sakai-master/conf"
+cp -r <path-to-tomcat>/conf/* tomcat-sakai-master/conf
 ```
 
 Add the following code to ```tomcat-sakai-master/conf/context.xml``` file.
@@ -176,7 +185,7 @@ Test Sakai app.
 cd sakai-workspace/tomcat-sakai-master
 
 # start the tomcat server and print the log file.
-bin/startup.sh; tail -f logs/catalina.out
+bin/start.sh; tail -f logs/catalina.out
 ```
 
 Open the browser and paste the link:
@@ -189,7 +198,7 @@ Stop the server.
 # stop the server
 # First: cmd + c (macOS) OR ctrl + c (Windows) to kill the program
 # Second: 
-bin/shutdown.sh
+bin/stop.sh
 ```
 
 ## Intellij IDEA Setup
@@ -238,3 +247,7 @@ Solution: Using x64 JDK to compile.
   - ```$ cat `which java` | file -```
   - Should display: ```architecture x86_64```
 - Note: Sdkman will add settings to the ```.zshrc``` file, which will modify the ```JAVA_HOME``` variable accordingly.
+
+## References
+
+- [Kunal's article (Sakai Developer)](https://kunaljaykam.medium.com/how-to-install-sakai-lms-on-mac-b1a66bc0e103)
